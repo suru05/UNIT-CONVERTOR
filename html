@@ -27,3 +27,59 @@ conversion feet to inches and inches to feet
     <script src="script.js"></script>
 </body>
 </html>
+//css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: tahoma;
+}
+
+h1#heading {
+    text-align: center;
+    margin-top: 35px;
+}
+
+#container {
+    margin: 20px auto 0px auto;
+    width: 70%;
+    text-align: center;
+    background-color: lightpink;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.input-div {
+    display: inline-block;
+}
+
+.input {
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 20px;
+}
+//js
+var feet = document.getElementById('feet');
+var inches = document.getElementById('inches');
+
+feet.addEventListener('input', function() {
+    let f = this.value;
+    let i = f * 12;
+    inches.value = i;
+});
+
+inches.addEventListener('input', function() {
+    let i = this.value;
+    let f = i / 12;
+    feet.value = f;
+});
